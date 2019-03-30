@@ -25,7 +25,7 @@ weatherForm.addEventListener('submit',(e)=>{
                 error.innerHTML=data.error;
             }
             else{
-       let change= display.innerHTML=data.forecast.temperature;
+       let change=display.innerHTML=data.forecast.temperature;
        const degree=(change-32)*(5/9);
        display.innerHTML=degree;
         display1.innerHTML=data.location;
