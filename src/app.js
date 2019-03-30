@@ -2,6 +2,7 @@ const path = require("path");
 const hbs = require("hbs");
 const express = require("express");
 const app = express();
+const port=process.env.PORT ||3000;
 const forecast=require('./utils/forecast')
 const geocode=require('./utils/geocode')
 //define paths
@@ -58,6 +59,6 @@ app.get("/weather", (req, res) => {
 app.get("*", (req, res) => {
   res.render("error");
 });
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("server started");
 });
